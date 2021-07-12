@@ -1,12 +1,29 @@
-export const ADD_ONE = "ADD_ONE";
-
-export const APPLY_NUMBER = "APPLY_NUMBER";
-export const CHANGE_OPERATION = "CHANGE_OPERATION";
-
-export const addOne = () => {
-    return({type:ADD_ONE});
+let addAction = (value) => {
+    return { type: "ADD", payload: value };
 }
 
-export const applyNumber = (number) => {
-    return({type:APPLY_NUMBER, payload:number});
+let subtractAction = (value) => {
+    return { type: "SUBTRACT", payload: value };
 }
+
+let clearAction = () => {
+    return { type: "CLEAR" };
+}
+
+let addToMemoryAction = () => {
+    return { type: "ADD_TO_MEMORY" }
+}
+
+const applyNumber = (value) => {
+    return({type:'APPLY_NUMBER', payload: value});
+}
+
+export default{
+    addAction,
+    subtractAction,
+    clearAction,
+    addToMemoryAction,
+    applyNumber,
+
+}
+
